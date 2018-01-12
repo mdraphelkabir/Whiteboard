@@ -14,12 +14,11 @@ import java.net.Socket;
 public class Client {
     private Socket socket;
     private InetAddress ip;
-    private int port;
+    final private int port = 8888;
     
-    public Client(InetAddress ip, int port)
+    public Client(InetAddress ip)
     {
         this.ip = ip;
-        this.port = port;
     }
     
     public void connection() throws IOException
