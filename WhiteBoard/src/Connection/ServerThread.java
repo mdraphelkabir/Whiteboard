@@ -25,9 +25,11 @@ public class ServerThread implements Runnable{
             PrintWriter printer = new PrintWriter(socket.getOutputStream());
                 ) {
             
-            
-            s = buffer.readLine();
-            System.out.println(s);
+            while(true)
+            {
+                s = buffer.readLine();
+                System.out.println(s);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
