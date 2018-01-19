@@ -28,8 +28,8 @@ public class ServerThread implements Runnable{
             
             s = buffer.readLine();
             System.out.println(s);
-        } catch (IOException ex) {
-            
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
     

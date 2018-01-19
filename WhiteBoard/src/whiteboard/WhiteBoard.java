@@ -10,7 +10,7 @@ public class WhiteBoard {
         new Thread(new Server()).start();
         try
         {
-            InetAddress ip = InetAddress.getLocalHost();
+            InetAddress ip = InetAddress.getByName("192.168.1.136");
             Client client = new Client(ip);
             if(true)
             {
@@ -19,7 +19,7 @@ public class WhiteBoard {
         }
         catch(Exception e)
         {
-            
+            e.printStackTrace();
         }
         
     }
