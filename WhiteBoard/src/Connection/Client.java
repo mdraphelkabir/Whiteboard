@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.util.Scanner;
 
 /**
  *
@@ -26,10 +27,12 @@ public class Client {
         socket = new Socket(ip, port);
         BufferedReader buffer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
         PrintWriter printer = new PrintWriter(socket.getOutputStream());
-        
-        String s = "Prova messaggio";
+        Scanner scanner = new Scanner(System.in);
+        while(true)
+        {
+        String s = scanner.nextLine();
         printer.println(s);
         printer.flush();
-        
+        }
     }
 }
